@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmc:XMCDA xmlns:xmc="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<categories>
+		<category id="cat2">
+			<rank>
+				<integer>3</integer>
+			</rank>
+		</category>
+		<category id="cat1">
+			<rank>
+				<integer>4</integer>
+			</rank>
+		</category>
+		<category id="cat4">
+			<rank>
+				<integer>1</integer>
+			</rank>
+		</category>
+		<category id="cat3">
+			<rank>
+				<integer>2</integer>
+			</rank>
+		</category>
+	</categories>
+</xmc:XMCDA>

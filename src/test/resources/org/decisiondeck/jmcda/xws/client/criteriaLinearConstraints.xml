@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmc:XMCDA xmlns:xmc="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<criteriaLinearConstraints>
+		<constraint>
+			<name>lamda&lt;=0.99</name>
+			<element>
+				<variable mcdaConcept="cutting level" id="lamda" />
+				<coefficient>
+					<real>-1</real>
+				</coefficient>
+			</element>
+			<rhs>
+				<real>-0.99</real>
+			</rhs>
+			<operator>geq</operator>
+			<value mcdaConcept="confidence level">
+				<rankedLabel>
+					<label>sure</label>
+					<rank>1</rank>
+				</rankedLabel>
+			</value>
+		</constraint>
+		<constraint>
+			<name>sum=1</name>
+			<element>
+				<criterionID>g1</criterionID>
+				<coefficient>
+					<real>1</real>
+				</coefficient>
+			</element>
+			<element>
+				<criterionID>g2</criterionID>
+				<coefficient>
+					<real>1</real>
+				</coefficient>
+			</element>
+			<element>
+				<criterionID>g3</criterionID>
+				<coefficient>
+					<real>1</real>
+				</coefficient>
+			</element>
+			<element>
+				<criterionID>g4</criterionID>
+				<coefficient>
+					<real>1</real>
+				</coefficient>
+			</element>
+			<element>
+				<criterionID>g5</criterionID>
+				<coefficient>
+					<real>1</real>
+				</coefficient>
+			</element>
+			<rhs>
+				<real>1</real>
+			</rhs>
+			<operator>eq</operator>
+			<value mcdaConcept="confidence level">
+				<rankedLabel>
+					<label>sure</label>
+					<rank>1</rank>
+					<!-- TODO: check this, strange (original was rank 11). -->
+				</rankedLabel>
+			</value>
+		</constraint>
+	</criteriaLinearConstraints>
+</xmc:XMCDA>

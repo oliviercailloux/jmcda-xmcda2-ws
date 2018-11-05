@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMCDA xmlns="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<alternatives xmlns="">
+		<alternative id="a00">
+			<active>true</active>
+		</alternative>
+		<alternative id="a01">
+			<active>true</active>
+		</alternative>
+		<alternative id="a02">
+			<active>true</active>
+		</alternative>
+		<alternative id="a03">
+			<active>true</active>
+		</alternative>
+		<alternative id="a04">
+			<active>true</active>
+		</alternative>
+		<alternative id="a05">
+			<active>true</active>
+		</alternative>
+		<alternative id="a06">
+			<active>true</active>
+		</alternative>
+		<alternative id="a07">
+			<active>true</active>
+		</alternative>
+		<alternative id="a08">
+			<active>true</active>
+		</alternative>
+		<alternative id="a09">
+			<active>true</active>
+		</alternative>
+		<alternative id="a10">
+			<active>true</active>
+		</alternative>
+		<alternative id="a11">
+			<active>true</active>
+		</alternative>
+		<alternative id="a12">
+			<active>true</active>
+		</alternative>
+		<alternative id="a13">
+			<active>true</active>
+		</alternative>
+		<alternative id="a14">
+			<active>true</active>
+		</alternative>
+		<alternative id="a15">
+			<active>true</active>
+		</alternative>
+		<alternative id="a16">
+			<active>true</active>
+		</alternative>
+		<alternative id="a17">
+			<active>true</active>
+		</alternative>
+		<alternative id="a18">
+			<active>true</active>
+		</alternative>
+		<alternative id="a19">
+			<active>true</active>
+		</alternative>
+		<alternative id="b1">
+			<active>false</active>
+		</alternative>
+		<alternative id="b2">
+			<active>false</active>
+		</alternative>
+		<alternative id="b3">
+			<active>false</active>
+		</alternative>
+	</alternatives>
+</XMCDA>

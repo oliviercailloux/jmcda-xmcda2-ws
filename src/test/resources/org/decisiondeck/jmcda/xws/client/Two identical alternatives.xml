@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmcda:XMCDA xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<projectReference>
+		<title>Two identical alternatives</title>
+		<comment>Two (almost) identical alternatives, one is assigned to two categories, the other one is not assigned.</comment>
+	</projectReference>
+	<alternatives mcdaConcept="REAL">
+		<alternative id="a1" />
+		<alternative id="a2" />
+	</alternatives>
+	<alternatives mcdaConcept="FICTITIOUS">
+		<alternative id="p1" />
+		<alternative id="p2" />
+	</alternatives>
+	<categories>
+		<category id="Cat3">
+			<rank>
+				<integer>1</integer>
+			</rank>
+		</category>
+		<category id="Cat2">
+			<rank>
+				<integer>2</integer>
+			</rank>
+		</category>
+		<category id="Cat1">
+			<rank>
+				<integer>3</integer>
+			</rank>
+		</category>
+	</categories>
+	<categoriesProfiles>
+		<categoryProfile>
+			<alternativeID>p1</alternativeID>
+			<limits>
+				<lowerCategory>
+					<categoryID>Cat1</categoryID>
+				</lowerCategory>
+				<upperCategory>
+					<categoryID>Cat2</categoryID>
+				</upperCategory>
+			</limits>
+		</categoryProfile>
+		<categoryProfile>
+			<alternativeID>p2</alternativeID>
+			<limits>
+				<lowerCategory>
+					<categoryID>Cat2</categoryID>
+				</lowerCategory>
+				<upperCategory>
+					<categoryID>Cat3</categoryID>
+				</upperCategory>
+			</limits>
+		</categoryProfile>
+	</categoriesProfiles>
+
+	<criteria>
+		<criterion id="g1">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>0</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<integer>0</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="g2">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>0</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<integer>0</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+		<criterion id="g3">
+			<scale>
+				<quantitative>
+					<preferenceDirection>max</preferenceDirection>
+				</quantitative>
+			</scale>
+			<thresholds>
+				<threshold mcdaConcept="pref">
+					<constant>
+						<integer>0</integer>
+					</constant>
+				</threshold>
+				<threshold mcdaConcept="ind">
+					<constant>
+						<integer>0</integer>
+					</constant>
+				</threshold>
+			</thresholds>
+		</criterion>
+	</criteria>
+
+	<performanceTable mcdaConcept="REAL">
+		<alternativePerformances>
+			<alternativeID>a1</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>1.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g2</criterionID>
+				<value>
+					<real>1.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g3</criterionID>
+				<value>
+					<real>1.0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+		<alternativePerformances>
+			<alternativeID>a2</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>1.1</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g2</criterionID>
+				<value>
+					<real>1.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g3</criterionID>
+				<value>
+					<real>1.0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+	</performanceTable>
+	<performanceTable mcdaConcept="FICTITIOUS">
+		<alternativePerformances>
+			<alternativeID>p1</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>0.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g2</criterionID>
+				<value>
+					<real>0.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g3</criterionID>
+				<value>
+					<real>2.0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+		<alternativePerformances>
+			<alternativeID>p2</alternativeID>
+			<performance>
+				<criterionID>g1</criterionID>
+				<value>
+					<real>2.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g2</criterionID>
+				<value>
+					<real>0.0</real>
+				</value>
+			</performance>
+			<performance>
+				<criterionID>g3</criterionID>
+				<value>
+					<real>2.0</real>
+				</value>
+			</performance>
+		</alternativePerformances>
+	</performanceTable>
+
+	<alternativesAffectations>
+		<alternativeAffectation>
+			<alternativeID>a1</alternativeID>
+			<categoriesSet>
+				<element>
+					<categoryID>Cat2</categoryID>
+				</element>
+				<element>
+					<categoryID>Cat3</categoryID>
+				</element>
+			</categoriesSet>
+		</alternativeAffectation>
+	</alternativesAffectations>
+</xmcda:XMCDA>

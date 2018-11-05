@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by zheng (EMBRACE) -->
+<xmcda:XMCDA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xmcda="http://www.decision-deck.org/2009/XMCDA-2.1.0">
+	<projectReference>
+		<comment>These assignment examples lead to a consistent system.</comment>
+	</projectReference>
+	<alternativesAffectations>
+		<alternativeAffectation>
+			<alternativeID>a00</alternativeID>
+			<categoriesInterval>
+				<lowerBound>
+					<categoryID>c2</categoryID>
+				</lowerBound>
+				<upperBound>
+					<categoryID>c4</categoryID>
+				</upperBound>
+			</categoriesInterval>
+			<value>
+				<rankedLabel>
+					<label>not sure</label>
+					<rank>0</rank>
+				</rankedLabel>
+			</value>
+		</alternativeAffectation>
+		<alternativeAffectation>
+			<alternativeID>a01</alternativeID>
+			<categoriesInterval>
+				<lowerBound>
+					<categoryID>c3</categoryID>
+				</lowerBound>
+				<upperBound>
+					<categoryID>c4</categoryID>
+				</upperBound>
+			</categoriesInterval>
+			<value>
+				<rankedLabel>
+					<label>not sure</label>
+					<rank>0</rank>
+				</rankedLabel>
+			</value>
+		</alternativeAffectation>
+	</alternativesAffectations>
+</xmcda:XMCDA>
