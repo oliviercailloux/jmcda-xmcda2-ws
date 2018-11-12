@@ -6,18 +6,18 @@
 		<version>0.5.4-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>jmcda-xmcda2-ws</artifactId>
+	<artifactId>xmcda2-ws</artifactId>
 	<name>XMCDA Web services module</name>
 	<description>A library to provide your own services, and the base library for services provided in the J-MCDA project.</description>
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>jmcda-base</artifactId>
+			<artifactId>base</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>jmcda-xmcda2-parsing</artifactId>
+			<artifactId>xmcda2-parsing</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
