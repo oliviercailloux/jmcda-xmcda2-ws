@@ -8,7 +8,7 @@
 		<version>0.6.0</version>
 	</parent>
 	<artifactId>xmcda2-ws</artifactId>
-	<version>0.5.4</version>
+	<version>0.5.5-SNAPSHOT</version>
 	<name>XMCDA Web services module</name>
 	<description>A library to provide your own services, and the base library for services provided in the J-MCDA project.</description>
 	<dependencies>
