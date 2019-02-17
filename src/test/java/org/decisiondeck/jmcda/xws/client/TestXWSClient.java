@@ -30,7 +30,7 @@ public class TestXWSClient {
 		client.setSubmitProblemNode(
 				XmlReadUtils.readNode(getClass().getResource("SixRealCars - XWSConcordance submitProblem body.xml")));
 		client.submitProblem();
-		client.requestSolution();
+		client.requestSolution(4);
 		final String msgString = client.getSolution("messages");
 		final XMethodMessages methodMessages = Iterables
 				.getOnlyElement(XMCDADoc.Factory.parse(msgString).getXMCDA().getMethodMessagesList());
@@ -57,7 +57,7 @@ public class TestXWSClient {
 		client.putParameter("criteria", new XMCDAReadUtils()
 				.getXMCDADoc(Resources.asByteSource(getClass().getResource("../SixRealCars with criteriaValues.xml"))));
 		client.submitProblem();
-		client.requestSolution();
+		client.requestSolution(4);
 		final String msgString = client.getSolution("messages");
 		final XMethodMessages methodMessages = Iterables
 				.getOnlyElement(XMCDADoc.Factory.parse(msgString).getXMCDA().getMethodMessagesList());

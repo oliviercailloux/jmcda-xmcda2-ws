@@ -113,8 +113,7 @@ public class XWSClient {
 			// final String stringParam = XmlUtils.toString(node);
 			elem.setTextContent(doc.toString());
 			/**
-			 * Can't add the node as node, must add as string (thus with '<'
-			 * quoted, e.g.).
+			 * Can't add the node as node, must add as string (thus with '<' quoted, e.g.).
 			 */
 			// for (Node child = node.getFirstChild(); child != null; child =
 			// child.getNextSibling()) {
@@ -127,9 +126,9 @@ public class XWSClient {
 	}
 
 	/**
-	 * Retrieves the ticket string that has been set manually or that has been
-	 * read in reply to a {@link #submitProblem()} call.
-	 * 
+	 * Retrieves the ticket string that has been set manually or that has been read
+	 * in reply to a {@link #submitProblem()} call.
+	 *
 	 * @return <code>null</code> if not set manually and no successful submit
 	 *         problem happened yet, or if set to <code>null</code> manually.
 	 * @see #submitProblem()
@@ -152,6 +151,14 @@ public class XWSClient {
 	}
 
 	public Map<String, String> requestSolution() throws XWSCallException {
+		try {
+			return requestSolution(0);
+		} catch (InterruptedException e) {
+			throw new IllegalStateException(e);
+		}
+	}
+
+	public Map<String, String> requestSolution(int retryTimes) throws XWSCallException, InterruptedException {
 		checkState(m_serviceUri != null);
 		checkState(m_ticket != null);
 		final StreamSource source = new StreamSource(
@@ -178,15 +185,19 @@ public class XWSClient {
 		}
 		final String status = m_solution.remove("service-status");
 		if (!status.equals("0")) {
-			throw new XWSCallException("Unexpected status: " + status + ".");
+			if (retryTimes == 0) {
+				throw new XWSCallException("Unexpected status: " + status + ".");
+			}
+			/** Ugly workaround for re-try. */
+			Thread.sleep(1000);
+			requestSolution(retryTimes - 1);
 		}
 
 		return m_solution;
 	}
 
 	/**
-	 * @param serviceUri
-	 *            <code>null</code> for not set.
+	 * @param serviceUri <code>null</code> for not set.
 	 */
 	public void setServiceUri(String serviceUri) {
 		m_serviceUri = serviceUri;
