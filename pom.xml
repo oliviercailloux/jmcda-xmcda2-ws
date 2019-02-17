@@ -13,12 +13,12 @@
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>base</artifactId>
-			<version>${project.version}</version>
+			<version>0.5.4</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>xmcda2-parsing</artifactId>
-			<version>${project.version}</version>
+			<version>0.5.4</version>
 		</dependency>
 
 		<dependency>
